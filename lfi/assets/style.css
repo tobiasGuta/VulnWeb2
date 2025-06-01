@@ -1,0 +1,25 @@
+body {
+    font-family: sans-serif;
+    background-color: #121212;
+    color: #eee;
+    padding: 20px;
+}
+
+header, footer {
+    background-color: #1e1e1e;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    margin-right: 10px;
+    color: #00ffe7;
+    text-decoration: none;
+}
+
+main {
+    padding: 10px;
+    background: #222;
+    border-radius: 8px;
+}

