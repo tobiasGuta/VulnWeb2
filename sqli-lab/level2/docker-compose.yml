@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: blind_sqli_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: blind_sqli
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "33060:3306"
+
+  web:
+    build: ./web
+    container_name: blind_sqli_web
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
