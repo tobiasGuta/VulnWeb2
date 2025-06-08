@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  db:
+    image: mariadb:10.11
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: vulnapp
+      MYSQL_USER: vulnuser
+      MYSQL_PASSWORD: vulnpass
+    volumes:
+      - db_data:/var/lib/mysql
+
+  web:
+    build: ./web
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: vulnuser
+      DB_PASS: vulnpass
+      DB_NAME: vulnapp
+    volumes:
+      - ./web:/var/www/html
+
+volumes:
+  db_data:
