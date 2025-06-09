@@ -1,0 +1,192 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #1c1e21;
+  background-color: #f0f2f5;
+}
+
+body {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1877f2 0%, #4a90e2 100%);
+}
+
+.profile-card {
+  background: #fff;
+  max-width: 420px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  padding: 30px 40px 40px;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 0 0 4px #1877f2;
+  transition: transform 0.3s ease;
+}
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px 5px #1877f2aa;
+}
+
+.username {
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #050505;
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+
+.user-status {
+  font-size: 1rem;
+  color: #606770;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: left;
+  color: #333;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #1877f2;
+  padding-bottom: 6px;
+}
+
+.users-list {
+  margin-bottom: 30px;
+  list-style: none;
+  padding-left: 0;
+  max-height: 160px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: left;
+  background: #fafafa;
+  box-shadow: inset 0 0 8px #e2e2e2;
+}
+
+.users-list li {
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.users-list li:last-child {
+  border-bottom: none;
+}
+
+.user-username {
+  color: #1877f2;
+  font-weight: 700;
+}
+
+.user-name {
+  color: #444;
+  font-style: italic;
+}
+
+.message {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  padding: 12px 20px;
+  user-select: none;
+}
+.message.error {
+  color: #b71c1c;
+  background: #ffcdd2;
+  border: 1px solid #f44336;
+}
+.message.success {
+  color: #1b5e20;
+  background: #c8e6c9;
+  border: 1px solid #4caf50;
+}
+
+.update-form label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  text-align: left;
+  color: #222;
+}
+
+input[name="name"] {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1.5px solid #ddd;
+  margin-bottom: 25px;
+  transition: border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+
+input[name="name"]:focus {
+  outline: none;
+  border-color: #1877f2;
+  box-shadow: 0 0 10px rgba(24, 119, 242, 0.6);
+}
+
+button {
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  box-shadow: 0 4px 10px rgb(24 119 242 / 0.7);
+}
+
+button:hover {
+  background-color: #145db2;
+  box-shadow: 0 6px 14px rgb(20 93 178 / 0.9);
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px 10px;
+  }
+  .profile-card {
+    padding: 25px 20px 30px;
+  }
+}
+
+.sql-output {
+    margin-top: 15px;
+    text-align: left;
+    background: #f4f6f8;
+    border: 1px solid #ccc;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: #222;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
